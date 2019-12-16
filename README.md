@@ -21,7 +21,7 @@ For complete example:
 
 You need to have `mariaDB` installed and running on port 5100 (you can change the port number from `config.py`). 
 
-First you install the requirements:
+First you have to install the requirements:
 
 `pip install -r requirements.txt`
 
@@ -33,6 +33,15 @@ Now you can run the application:
 
 `flask run`
 
+to run the tests:
+
+`pytest app/tests`
+
+
+
+## Customization
+
+In order to support 
 
 
 
