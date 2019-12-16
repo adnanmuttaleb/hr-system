@@ -1,6 +1,6 @@
 # HR
 
-Describtion of setup and usage of HR System.
+Description of setup and usage of HR System.
 
 ## Usage
 This system has the following resources:
