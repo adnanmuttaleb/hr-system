@@ -33,7 +33,7 @@ You need to have `mariaDB` installed and running on port `5100` (you can change 
 
 `flask run`
 
-To run the test casesm just run the following command:
+To run the test cases just run the following command:
 
 `pytest app/tests`
 
@@ -43,17 +43,21 @@ To run the test casesm just run the following command:
 In order to support new File Storage options you need first to inherit from `FileHandler` class:
 
 
-`class FileHandler():
+```
+class FileHandler():
     def save():
         raise NotImplementedError()
     def retrieve():
-        raise NotImplementedError()`
+        raise NotImplementedError()
+```
 
-`class CustomFileHandler(FileHandler):
+```
+class CustomFileHandler(FileHandler):
     def save(file, file_name):
         ...
     def retrieve(file_name):
-        ...`
+        ...
+```
 
 Then in `config.py` override FILE_HANDLER variable:
 
