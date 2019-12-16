@@ -21,15 +21,15 @@ For complete example:
 
 You need to have `mariaDB` installed and running on port `5100` (you can change the port number from `config.py`). 
 
-First you have to install the requirements:
+1. First you have to install the requirements:
 
 `pip install -r requirements.txt`
 
-Then you have to do the migrations:
+2. Then you have to do the migrations:
 
 `flask db upgrade`
 
-Now you can run the application:
+3. Now you can run the application:
 
 `flask run`
 
