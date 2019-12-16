@@ -1,6 +1,6 @@
 from datetime import datetime
 from sqlalchemy.dialects.postgresql import UUID
-
+from sqlalchemy import desc
 from . import db
 
 class Candidate(db.Model):
@@ -22,7 +22,10 @@ class Candidate(db.Model):
     )
     
     registration_date = db.Column(db.DateTime, default=datetime.now)
-
+    
+    @staticmethod
+    def get_candidates():
+        return Candidate.query.order_by(desc(Candidate.registration_date)).all() 
 
 class Department(db.Model):
     id = db.Column(db.Integer, primary_key=True)

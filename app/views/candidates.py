@@ -1,5 +1,4 @@
 from werkzeug.datastructures import MultiDict
-from sqlalchemy import desc
 from flask_restplus import Namespace, Resource, marshal_with
 from flask import request
 from flask_restplus import fields
@@ -40,7 +39,7 @@ class CandidateList(Resource):
     @is_admin
     @marshal_with(candidate_model)
     def get(self):
-        return Candidate.query.order_by(desc(Candidate.registration_date)).all()  
+        return Candidate.get_candidates() 
     
     @api.expect(candidate_creation_model, validate=False)
     def post(self):

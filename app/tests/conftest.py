@@ -4,7 +4,6 @@ import pytest
 
 from .. import create_app, db
 from ..models import Candidate
-from sqlalchemy import desc
 
 
 @pytest.fixture(scope='session')
@@ -50,5 +49,5 @@ def resume():
 
 @pytest.fixture
 def sorted_candidates(test_client, init_db):
-    return  Candidate.query.order_by(desc(Candidate.registration_date)).all()
+    return  Candidate.get_candidates()
     
